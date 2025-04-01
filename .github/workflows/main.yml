@@ -8,10 +8,10 @@ jobs:
     timeout-minutes: 360  # Max runtime: 6 hours
 
     steps:
-    - name: Update and Install xRDP
+    - name: Update and Install xRDP with Ubuntu Desktop (GNOME)
       run: |
         sudo apt update -y
-        sudo apt install -y xrdp xfce4 xfce4-goodies
+        sudo apt install -y xrdp ubuntu-desktop
         sudo systemctl enable xrdp
         sudo systemctl start xrdp
       shell: bash
